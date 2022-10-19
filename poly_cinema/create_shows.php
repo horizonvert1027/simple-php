@@ -18,8 +18,9 @@ $result = mysqli_query($conn, $sql);
 
 if($result == true)
 {
-    echo "working";
+    header("location:view_shows.php");
 }
 else{
-    echo "fail";
+    header("location:insert_show.php?state=false");
 }
+mysqli_close($conn);

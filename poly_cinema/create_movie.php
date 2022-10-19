@@ -10,7 +10,6 @@ include "db_connection.php";
   //echo $folder;
   move_uploaded_file($tempname, $folder);
 
-$std_image = $_POST["std_image"];
 $movie_name = $_POST["movie_name"];
 $director_name = $_POST["director_name"];
 $cast = $_POST["cast"];
@@ -31,8 +30,9 @@ $result= mysqli_query($conn,$sql);
 
 if($result == true)
 {
-    echo "working";
+    header("location:view_movies.php");
 }
 else{
-    echo "fail";
+    header("location:insert_movie.php?state=false");
 }
+mysqli_close($conn);

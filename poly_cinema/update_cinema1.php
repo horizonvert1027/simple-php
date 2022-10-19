@@ -15,24 +15,12 @@ where cinema_id = $cinema_id"; // saving sql code in a varible
 
 $resulte = mysqli_query($conn, $sql); // checking if the sql code have no errors 
 
-if($resulte == true)
+
+if($result == true)
 {
-    print "update cinema worked";
-
+    header("location:view_cinemas.php");
 }
-else
-{
-    print "Error can not update cinema";
+else{
+    header("location:view_cinemas.php?state=false");
 }
-
-
-
-
-
-
-
-
-
-
-
 ?>

@@ -1,7 +1,7 @@
 <?php
 
 include "db_connection.php";
-$id= $_GET["movie_id"];
+$id= $_GET["id"];
 
 
 
@@ -10,11 +10,10 @@ $id= $_GET["movie_id"];
 
  $result = mysqli_query($conn, $sql);
 
- if($result == true)
- {
-    echo"working";
- }
- else
- {
-    echo"fail";
- }
+if($result == true)
+{
+    header("location:view_movies.php");
+}
+else{
+    header("location:view_movies.php?state=false");
+}

@@ -17,12 +17,10 @@ echo $sql;
 
 $resulte = mysqli_query($conn, $sql); // checking if the sql code have no errors 
 
-if($resulte == true)
+if($result == true)
 {
-    print "update show worked";
-
+    header("location:view_shows.php");
 }
-else
-{
-    print "Error can not update show";
+else{
+    header("location:view_shows.php?state=false");
 }

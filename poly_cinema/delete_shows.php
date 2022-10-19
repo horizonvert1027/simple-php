@@ -10,11 +10,10 @@ $id= $_GET["id"];
 
  $result = mysqli_query($conn, $sql);
 
- if($result == true)
- {
-    echo"working";
- }
- else
- {
-    echo"fail";
- }
+if($result == true)
+{
+    header("location:view_shows.php");
+}
+else{
+    header("location:view_shows.php?state=false");
+}

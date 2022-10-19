@@ -10,11 +10,11 @@ $id= $_GET["id"];
 
  $result = mysqli_query($conn, $sql);
 
- if($result == true)
- {
-    echo"working";
- }
- else
- {
-    echo"fail";
- }
+
+if($result == true)
+{
+    header("location:viewprofile_new.php");
+}
+else{
+    header("location:viewprofile_new.php?state=false");
+}
