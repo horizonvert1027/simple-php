@@ -15,8 +15,9 @@ $result= mysqli_query($conn,$sql);
 
 if($result == true)
 {
-    echo "working";
+    header("location:login.php");
 }
 else{
-    echo "fail";
+    header("location:signup.php");
+
 }
