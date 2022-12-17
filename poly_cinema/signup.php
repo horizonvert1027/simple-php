@@ -1,124 +1,71 @@
-<style>
-  form {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-  }
-
-  input {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-  }
-
-  input[type=submit] {
-    width: 100%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-</style>
-
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <title>Implement Sticky Header and Footer with CSS</title>
-  <!-- <script type="text/javascript"
-    src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=TpS6LT6c32UEqX6tyYKgKep9-eq3-WrVpe0mVIQYxC2VJKDCkmjUKohcJ5xI-TbCOgI9jNn8f6zx0pzcu0llglhdk7YCiJVjxJGxwLBDX86ZO2ZqZMTyIQXeEtbTOYtlXXRa_ehRmh3O1AZIBlAeQ0bvEjcFmbwdih5VcFJYo5elsMSXEKoP8bPQE0yYGVCo"
-    charset="UTF-8"></script> -->
-  <style>
-    /* Add some padding on document's body to prevent the content
-    to go underneath the header and footer */
-    body {
-      padding-top: 60px;
-      padding-bottom: 40px;
-    }
-
-    .fixed-header,
-    .fixed-footer {
-      width: 100%;
-      position: fixed;
-      background: #333;
-      padding: 10px 0;
-      color: #fff;
-    }
-
-    .fixed-header {
-      top: 0;
-    }
-
-    .fixed-footer {
-      bottom: 0;
-    }
-
-    .container {
-      width: 80%;
-      margin: 0 auto;
-      /* Center the DIV horizontally */
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      padding: 7px 25px;
-      display: inline-block;
-    }
-
-    table {
-      border-collapse: collapse;
-      width: 100%;
-    }
-
-    th,
-    td {
-      text-align: left;
-      padding: 8px;
-      border: 2px solid #f2f2f2;
-    }
-
-    tr:nth-child(even) {
-      background-color: #f2f2f2
-    }
-
-    th {
-      background-color: #04AA6D;
-      color: white;
-    }
-  </style>
+  <head>
+    <meta charset="utf-8" />
+    <title>Implement Sticky Header and Footer with CSS</title>
 </head>
-
-<body>
-
-  <div class="container">
-    <p>Signup Page</p>
-
-    <form action="create_employee.php" method="POST">
-
-      <label> Employee Name</label>
-      <input type="text" name="emplyee_name">
-
-      <label> Employee Email</label>
-      <input type="text" name="employee_email">
-
-      <label> Password</label>
-      <input type="password" name="employee_password">
-
-      <input type="submit" name="submit" value="submit">
-
-
-    </form>
-
-  </div>
-  <div class="fixed-footer">
-    <div class="container">Copyright &copy; 2021 Your Company</div>
-  </div>
-</body>
-
+  <body>
+    <div class="login-wrapper" id="signup-content">
+      <div class="login-content">
+        <h3>sign up</h3>
+        <form method="post" action="create_employee.php">
+          <div class="row">
+            <label for="username-2">
+              emplyee_name:
+              <input
+                type="text"
+                name="emplyee_name"
+                id="username-2"
+                placeholder="Hugh Jackman"
+                pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{8,20}$"
+                required="required"
+              />
+            </label>
+          </div>
+          <div class="row">
+            <label for="email-2">
+              emplyee email:
+              <input
+                type="password"
+                name="employee_email"
+                id="email-2"
+                placeholder=""
+                pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                required="required"
+              />
+            </label>
+          </div>
+          <div class="row">
+            <label for="password-2">
+              Password:
+              <input
+                type="password"
+                name="employee_password"
+                id="password-2"
+                placeholder=""
+                pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                required="required"
+              />
+            </label>
+          </div>
+          <div class="row">
+            <label for="repassword-2">
+              re-type Password:
+              <input
+                type="password"
+                name="password"
+                id="repassword-2"
+                placeholder=""
+                pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                required="required"
+              />
+            </label>
+          </div>
+          <div class="row">
+            <button type="submit" name="submit">sign up</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
 </html>
